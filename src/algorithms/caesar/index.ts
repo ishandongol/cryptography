@@ -4,7 +4,7 @@ import { alphabets } from "../constants";
 interface CaesarProps {
   shift: number
 }
-export class Caesar implements Cryptography {
+export class Caesar implements Cryptography<CaesarProps> {
 
   private shift: number
 
