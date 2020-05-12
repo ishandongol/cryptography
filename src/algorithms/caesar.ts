@@ -35,16 +35,15 @@ export class Caesar implements Cryptography {
   async mapMessage(op: 'en' | 'de', message: string): Promise<string> {
     return new Promise((resolve, reject) => {
       try {
-        const encodings: string[] = []
+        let encodings: string = ''
         for (let i = 0; i < message.length; i++) {
           const encodedAlphabet = this.generate(op, message.charAt(i))
           if (encodedAlphabet === undefined) {
             throw new Error(`Alphabet not found ${message.charAt(i)}`)
           }
-          encodings.push(encodedAlphabet)
+          encodings += encodedAlphabet
         }
-        const processedMessage = encodings.join('')
-        resolve(processedMessage)
+        resolve(encodings)
       } catch (err) {
         reject(err)
       }
