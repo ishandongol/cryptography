@@ -1,0 +1,20 @@
+{
+  "name": "cryptography",
+  "version": "1.0.0",
+  "description": "trying some cryptography",
+  "main": "index.js",
+  "author": "Ishan Dongol",
+  "license": "MIT",
+  "scripts": {
+    "transpile": "tsc",
+    "start": "node ./dist/index.js",
+    "encode": "yarn start ENCODE",
+    "decode": "yarn start DECODE",
+    "init:tsc": "tsc --init",
+    "build": "rm -rf ./dist && tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "typescript": "^3.8.3"
+  }
+}
