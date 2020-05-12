@@ -1,10 +1,3 @@
-export const alphabets: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-const alphabetsMapToNumbers = new Map<string, number>()
-const numbersMapToAlphabets = new Map<number, string>()
-
-alphabets.forEach((alphabet, index) => {
-  alphabetsMapToNumbers.set(alphabet, index)
-  numbersMapToAlphabets.set(index, alphabet)
-})
-
-export { alphabetsMapToNumbers, numbersMapToAlphabets }
+export const smallAlphabets: string[] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+export const bigAlphabets: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+export const alphabets: string[] = [...smallAlphabets, ...bigAlphabets]

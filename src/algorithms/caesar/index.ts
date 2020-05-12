@@ -1,5 +1,6 @@
-import { Cryptography } from "../interfaces/cryptography";
-import { alphabetsMapToNumbers, numbersMapToAlphabets, alphabets } from './constants'
+import { Cryptography } from "../../interfaces/cryptography";
+import { alphabetsMapToNumbers, numbersMapToAlphabets } from './constants'
+import { alphabets } from "../constants";
 interface CaesarProps {
   shift: number
 }
