@@ -1,6 +1,7 @@
 import { Caesar } from "./algorithms/caesar"
+import { StraddleCheckerboard } from "./algorithms/straddleCheckerboard"
 
-const awesomeFunction = async (...args: string[]) => {
+const caesarFunction = async (...args: string[]) => {
   try {
 
     const shift = args[1]
@@ -10,12 +11,15 @@ const awesomeFunction = async (...args: string[]) => {
       throw new Error("Insufficient arguments")
     }
     const caesar = new Caesar({ shift: parseInt(shift, 10) })
+    const stradleCheckerboard = new StraddleCheckerboard({ key: 'sdlmzyoxpftegnjrvcihbqakwu', sparePositions: [6, 7] })
     switch (op) {
       case 'ENCODE':
-        console.log('Encoded message:', await caesar.endcode(message))
+        // console.log('Encoded message:', await caesar.endcode(message))
+        console.log("Encoded: ", await stradleCheckerboard.endcode(message))
         break;
       case 'DECODE':
-        console.log('Decoded message:', await caesar.decode(message))
+        // console.log('Decoded message:', await caesar.decode(message))
+        console.log("Decoded: ", await stradleCheckerboard.decode(message))
         break;
       default:
         console.log('unknown')
@@ -26,4 +30,4 @@ const awesomeFunction = async (...args: string[]) => {
 
 }
 const args = process.argv;
-awesomeFunction(args[2], args[3], args[4])
+caesarFunction(args[2], args[3], args[4])
